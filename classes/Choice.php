@@ -11,6 +11,14 @@ class Choice {
 		}
 	}
 
+	// For demo purposes
+	public function showAllChoices() {
+		$sql = "SELECT * FROM choices";
+		$stmt = $this->conn->prepare($sql);
+		$stmt->execute();
+		return $stmt->fetchAll();
+	}
+
 	public function showAllChoicesByQuestionID($question_id) {
 		$sql = "SELECT * FROM choices 
 			WHERE question_id = ?

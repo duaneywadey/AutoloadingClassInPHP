@@ -26,5 +26,17 @@ echo "<h1>" . $getQuizByID[1] . "</h1>";
 // Accessing by column name
 echo "<h1>" . $getQuizByID['date_added'] . "</h1>";
 
+// Displaying records from the database (using fetch_all() method)
+$showAllAdmins = $adminObj->showAllAdminRequests();
+echo '<pre>';
+print_r($showAllAdmins); 
+echo '</pre>';
+
+// Displaying all choices from the database (using fetch_all() method)
+$showAllChoices = $choiceObj->showAllChoices();
+echo '<pre>';
+print_r($showAllChoices); 
+echo '</pre>';
+
 
 ?>

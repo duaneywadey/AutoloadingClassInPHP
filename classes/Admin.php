@@ -19,7 +19,6 @@ class Admin {
 					admin_requests.admin_request_letter AS admin_request_letter
 				FROM users
 				JOIN admin_requests ON users.user_id = admin_requests.user_id
-				WHERE admin_requests.is_approved = 0
 				";
 		$stmt = $this->conn->prepare($sql);
 		$stmt->execute();
