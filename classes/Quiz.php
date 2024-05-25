@@ -16,5 +16,16 @@ class Quiz {
 		$stmt->execute();
 		return $stmt->fetchAll();
 	}
+
+	public function getQuizByID($quiz_id) {
+	$sql = "
+			SELECT * FROM quizzes 
+			WHERE quiz_id = ?
+			";
+	$stmt = $this->conn->prepare($sql);
+	$stmt->execute([$quiz_id]);
+	return $stmt->fetch();
+	
+	}
 }
 ?>

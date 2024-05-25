@@ -16,4 +16,5 @@ spl_autoload_register(function($className) {
 
 $adminObj = new Admin($conn);
 $quizObj = new Quiz($conn);
+$questionObj = new Question($conn);
 
