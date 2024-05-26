@@ -16,7 +16,11 @@ class Choice {
 		$sql = "SELECT * FROM choices";
 		$stmt = $this->conn->prepare($sql);
 		$stmt->execute();
-		return $stmt->fetchAll();
+		$data = $stmt->fetch();
+		$result = [
+			"description" => $data['description']
+		];
+		echo json_encode($result);
 	}
 
 	public function showAllChoicesByQuestionID($question_id) {

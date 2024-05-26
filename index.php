@@ -40,3 +40,48 @@ echo '</pre>';
 
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+	<style>
+		.box {
+			border-style: solid;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<form action="php/choices.php" method="POST">
+			<input type="submit" value="See All" name="seeAllChoices">
+		</form>
+		<h1>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Doloribus quas corporis similique iusto accusantium laboriosam ad delectus dolor alias voluptate eligendi impedit repudiandae, consectetur veniam aspernatur quia est architecto tempora.</h1>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			$('.box').click(function(e){
+				e.preventDefault();
+				$.ajax({
+					url:'php/choices.php',
+					type:'post',
+					dataType:'json',
+					data: {
+						seeAllChoices: 1
+					}, success: function (response) {
+						console.log(response.description);
+					}, error: function (response) {
+						console.log(response);
+					}
+				})
+
+			});
+
+		});
+	</script>
+</body>
+</html>
