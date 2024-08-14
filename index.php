@@ -1,5 +1,5 @@
 <?php 
-require_once 'core/core.php';
+require_once 'controllers/core.php';
 
 // $showAllAdmins = $adminObj->showAllAdminRequests();
 // print_r($showAllAdmins); 

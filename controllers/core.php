@@ -7,15 +7,17 @@ require_once "dbConfig.php";
 
 // Autoload classes
 spl_autoload_register(function($className) {
-    $path = "classes/";
+    $path = "models/";
     $extension = ".php";
     $fullPath = $path.$className.$extension;
-
     require_once $fullPath;
 });
 
+
+// Add objects here to access classes methods
 $adminObj = new Admin($conn);
 $quizObj = new Quiz($conn);
 $questionObj = new Question($conn);
 $choiceObj = new Choice($conn);
+$postObj = new Post($conn);
 
