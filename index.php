@@ -59,7 +59,7 @@ echo '</pre>';
 		<form action="php/choices.php" method="POST">
 			<input type="submit" value="See All" name="seeAllChoices">
 		</form>
-		<h1>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Doloribus quas corporis similique iusto accusantium laboriosam ad delectus dolor alias voluptate eligendi impedit repudiandae, consectetur veniam aspernatur quia est architecto tempora.</h1>
+		<h1 style="color: red;">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Doloribus quas corporis similique iusto accusantium laboriosam ad delectus dolor alias voluptate eligendi impedit repudiandae, consectetur veniam aspernatur quia est architecto tempora.</h1>
 	</div>
 
 	<script>
